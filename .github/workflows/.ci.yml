@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  qa:
+    runs-on: "python3.9-buster"
+    steps:
+    - uses: actions/checkout@v2
+    - name: linting
+      run: |
+        pip install pylint
+        pylint --max-line-length=88 --disable=too-few-public-methods --notes= vpnmupd/
+    - name: testing
+      run: |
+        pip install pytest
+        pytest -v
+  release:
+    runs-on: "ubuntu-latest"
+    needs: qa
+    steps:
+    - uses: actions/checkout@v2
+    - name: release
+      run: |
+        pip install poetry
+        poetry publish --build --username anatolio --password {{secret.PYPI_PASSWORD}}

@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "vpnmupd"
+version = "0.1.0"
+description = ""
+authors = ["Anatolio <nikiforova693@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+schedule = "^1.1.0"
+anyd = "^0.3.7"
+tqdm = "^4.62.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^21.5b1"
+isort = "^5.8.0"
+pylint = "^2.8.2"
+mypy = "^0.910"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

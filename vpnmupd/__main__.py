@@ -1,0 +1,1 @@
+from vpnmupd import cli
