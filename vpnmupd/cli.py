@@ -29,6 +29,7 @@ args = parser.parse_args()
 installer = Installer(args.verbose)
 
 if args.update:
+    # TODO: Welcome message
     installer.set_updatable_dependencies()
     dependencies = installer.install_or_update()
 
@@ -39,10 +40,13 @@ if args.update:
     unit = SystemdUnit(executable, verbose=False)
     unit.content = unit.content.replace(
         unit.executable.location.as_posix(),
-        f"python3 {unit.executable.filename}",
+        f"python3 -m {executable.filename}",
     )
-    unit.dump()
-    unit.start()
+    if unit.dump():
+        if not unit.start():
+            raise RuntimeError(f"{unit.filename} is not started")
+    else:
+        raise FileNotFoundError(unit.location.as_posix())
 elif args.uninstall:
     installer.uninstall()
 else:

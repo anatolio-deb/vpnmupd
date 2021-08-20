@@ -26,12 +26,12 @@ jobs:
       run: |
         pip install pytest
         pytest -v
-  release:
-    runs-on: "ubuntu-latest"
-    needs: qa
-    steps:
-    - uses: actions/checkout@v2
-    - name: release
-      run: |
-        pip install poetry
-        poetry publish --build --username anatolio --password {{secret.PYPI_PASSWORD}}
+  # release:
+  #   runs-on: "ubuntu-latest"
+  #   needs: qa
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - name: release
+  #     run: |
+  #       pip install poetry
+  #       poetry publish --build --username anatolio --password ${{ secret.PYPI_PASSWORD }}

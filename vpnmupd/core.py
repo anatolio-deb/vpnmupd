@@ -294,11 +294,11 @@ WantedBy=multi-user.target"""
                 check=True,
                 capture_output=True,
             )
-        except subprocess.CalledProcessError as ex:
-            logging.exception(ex)
-        else:
-            if "active" in proc.stdout.decode():
-                return True
+        except subprocess.CalledProcessError:
+            return False
+
+        if "active" in proc.stdout.decode():
+            return True
         return False
 
     def dump(self) -> bool:
