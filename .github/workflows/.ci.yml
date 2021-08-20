@@ -21,7 +21,7 @@ jobs:
     - name: linting
       run: |
         pip install pylint
-        pylint --max-line-length=88 --disable=too-few-public-methods --notes= vpnmupd/
+        pylint --max-line-length=88 --disable=too-few-public-methods, missing-module-docstring, unused-import, missing-class-docstring, missing-function-docstring --notes= vpnmupd/
     - name: testing
       run: |
         pip install pytest

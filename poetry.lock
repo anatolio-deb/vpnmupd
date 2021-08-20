@@ -1,10 +1,10 @@
 [[package]]
 name = "anyd"
-version = "0.3.7"
+version = "0.4.1"
 description = "A small framework for building and using custom Unix daemons."
 category = "main"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = ">=3.8,<4.0"
 
 [[package]]
 name = "appdirs"
@@ -309,13 +309,13 @@ python-versions = "*"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "8c9eb388195a255ca25943adc023e10cd066a7c04e42c69236289946668aab6d"
+python-versions = "^3.8"
+content-hash = "7a24ad343f985ae8d6c6c2908b9c3ac767c1ee22554a6715d72bb0064e31594d"
 
 [metadata.files]
 anyd = [
-    {file = "anyd-0.3.7-py3-none-any.whl", hash = "sha256:365d2c9443226f182e6b5a96890ea9b1a65d31becce7c65cac6729c517040117"},
-    {file = "anyd-0.3.7.tar.gz", hash = "sha256:86d4a329f2f1a6f9e013ad8f667ecfc67d635b00c34858f15ddf85f2a25cf2c7"},
+    {file = "anyd-0.4.1-py3-none-any.whl", hash = "sha256:9f94aa2c5de85e9259dd7d3d1d5e03792eb389bcb8ee921b7a28cbe420be7d85"},
+    {file = "anyd-0.4.1.tar.gz", hash = "sha256:3587b5c0975253fb43543bb2826115d980d80be3a1ce16fa7153d08f797416cd"},
 ]
 appdirs = [
     {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
