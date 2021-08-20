@@ -5,7 +5,7 @@ description = ""
 authors = ["Anatolio <nikiforova693@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 schedule = "^1.1.0"
 anyd = "^0.3.7"
 tqdm = "^4.62.1"

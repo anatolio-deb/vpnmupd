@@ -307,7 +307,7 @@ WantedBy=multi-user.target"""
 
             try:
                 proc = subprocess.run(
-                    ["systemtl", "daemon-reload"], check=True, capture_output=True
+                    ["systemctl", "daemon-reload"], check=True, capture_output=True
                 )
             except subprocess.CalledProcessError as ex:
                 logging.exception(ex)
