@@ -234,7 +234,8 @@ class SystemdUnit(AbstractBaseFile):
 
     def __init__(self, executable: Executable, verbose: bool) -> None:
         super().__init__(f"{executable.filename}.service")
-        self.content = f"""[Unit]Description={executable.filename}
+        self.content = f"""[Unit]
+Description={executable.filename}
 After=network-online.target
 Wants=network-online.target
 
